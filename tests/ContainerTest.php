@@ -29,6 +29,8 @@ final class ContainerTest extends TestCase
         $this->assertInstanceOf(ChildClass3::class, $mainClass->childClass3);
         $this->assertInstanceOf(ChildClass2::class, $mainClass->childClass3->childClass2);
         $this->assertSame('foo', $mainClass->childClass3->childClass2->sampleParameter);
+
+        $this->assertSame($this->container->get(ChildClass2::class), $mainClass->childClass3->childClass2);
     }
 
     public function testWithInterface(): void

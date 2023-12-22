@@ -15,8 +15,6 @@ $container->setParameter('sampleParameter', 'sampleValue');
 Let's start with basic usage example
 
 ```php
-interface SomeInterface {}
-
 class Foo {
     public function __construct(public string $sampleParameter)
     {

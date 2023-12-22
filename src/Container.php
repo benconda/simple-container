@@ -39,7 +39,7 @@ final class Container implements ContainerInterface
             throw new CircularDependencyException($id, $this->circularDependencyCheck);
         }
         $this->circularDependencyCheck[] = $id;
-        $instance = $this->classContainer[$className] ?? self::resolveClassDependencies($className);
+        $instance = $this->classContainer[$className] ??= self::resolveClassDependencies($className);
         array_pop($this->circularDependencyCheck);
 
         return $instance;
