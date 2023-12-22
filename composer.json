@@ -1,0 +1,30 @@
+{
+    "name": "benconda/simple-container",
+    "description": "A very simple dependency injection container based on reflection",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "psr/container": "^2.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.3",
+        "phpunit/phpunit": "^10.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Benconda\\SimpleContainer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BenCondaTest\\SimpleContainer\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Benoit Condaminet",
+            "email": "benoit@condami.net"
+        }
+    ]
+}
